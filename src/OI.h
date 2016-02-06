@@ -11,6 +11,11 @@ public:
 	OI();
 	Joystick *driveStick;
 	Joystick *GetDriveJoystick();
+	JoystickButton *intakeRollInButton;
+	JoystickButton *intakeRollOutButton;
+	JoystickButton *intakeRotateUpButton;
+	JoystickButton *intakeRotateDownButton;
+
 };
 
 #endif

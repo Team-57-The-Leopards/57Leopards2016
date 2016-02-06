@@ -26,6 +26,16 @@ static const uint32_t ch_BackLeftM = 4;
 static const uint32_t ch_BackRightM = 1;
 static const uint32_t ch_FrontRightM = 2;
 
+//Can VictorSP for Intake
+static const uint32_t ch_IntakeRollerM=5;
+static const uint32_t ch_IntakeArmM=6;
+
 // Joysticks
 static const uint32_t ch_driveStick = 0;
+
+//Buttons on the Drive Joystick
+static const uint32_t ch_intakeIn = 1;
+static const uint32_t ch_intakeOut = 2;
+static const uint32_t ch_intakeArmRotateUp = 12;
+static const uint32_t ch_intakeArmRotateDown = 11;
 #endif
