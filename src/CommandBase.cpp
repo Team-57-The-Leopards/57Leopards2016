@@ -6,6 +6,7 @@
 
 OI* CommandBase::oi = NULL;
 Chassis* CommandBase::chassis = NULL;
+Intake* CommandBase::intake = NULL;
 CommandBase::CommandBase(char const *name) :
 		Command(name)
 {

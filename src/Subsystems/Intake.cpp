@@ -14,17 +14,17 @@ void Intake::InitDefaultCommand()
 }
 
 void Intake::RollerIn(){
-	intakeWheels ->Set(1);
+	intakeWheels ->Set(1.0);
 }
 
 void Intake::RollerOut(){
-	intakeWheels ->Set(-1);
+	intakeWheels ->Set(-1.0);
 }
 
 void Intake::RotateArmDown(){
-	intakeArm ->Set(-1);
+	intakeArm ->Set(-.5);
 }
 
 void Intake::RotateArmUp(){
-	intakeArm ->Set(1);
+	intakeArm ->Set(.5);
 }
