@@ -4,6 +4,7 @@ Roller_In::Roller_In()
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
+	Requires(intake);
 }
 
 // Called just before this Command runs the first time
@@ -15,7 +16,7 @@ void Roller_In::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void Roller_In::Execute()
 {
-	if(!intake->RollerIn())intake->RollerIn();
+	intake->RollerIn();
 }
 
 // Make this return true when this Command no longer needs to run execute()

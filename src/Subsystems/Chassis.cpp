@@ -27,10 +27,10 @@ void Chassis::DriveWithJoystick(Joystick *drivestick)
 	double x=drivestick->GetY();
 	double y=drivestick->GetX();
 
-	frontrightm->Set(-(y+x));
-	frontleftm->Set(-(y-x));
-	backrightm->Set(-(y+x));
-	backleftm->Set(-(y-x));
+	frontrightm->Set((y+x));
+	frontleftm->Set((y-x));
+	backrightm->Set((y+x));
+	backleftm->Set((y-x));
 
 	//SmartDashboard::PutNumber("Encoder Velocity (FR)", frontrightm->GetEncVel());
 	//SmartDashboard::PutNumber("Encoder Velocity (BR)", backrightm->GetEncVel());

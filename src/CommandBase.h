@@ -3,7 +3,7 @@
 
 #include <string>
 #include "Commands/Command.h"
-#include "Subsystems/Subsystem.h"
+#include "Commands/Subsystem.h"
 #include "Subsystems/Chassis.h"
 #include "Subsystems/Intake.h"
 #include "OI.h"

@@ -18,7 +18,7 @@ OI::OI()
 
 	//set the buttons to commands
 	intakeRollInButton -> WhenPressed(new Roller_In());
-	intakeRollOutButton && intakeRollInButton -> WhenPressed(new Roller_Out());
+	intakeRollOutButton -> WhenPressed(new Roller_Out());
 	intakeRotateUpButton -> WhenPressed(new Intake_Up());
 	intakeRotateDownButton -> WhenPressed(new Intake_Down());
 
