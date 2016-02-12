@@ -30,11 +30,11 @@ private:
 		//the camera name (ex "cam0") can be found through the roborio web interface
 		//imaqError = IMAQdxOpenCamera("cam0", IMAQdxCameraControlModeController, &session);
 		if(imaqError != IMAQdxErrorSuccess) {
-			//DriverStation::ReportError("IMAQdxOpenCamera error: " + std::to_string((long)imaqError) + "\n");
+			DriverStation::ReportError("IMAQdxOpenCamera error: " + std::to_string((long)imaqError) + "\n");
 		}
 		//imaqError = IMAQdxConfigureGrab(session);
 		if(imaqError != IMAQdxErrorSuccess) {
-			//DriverStation::ReportError("IMAQdxConfigureGrab error: " + std::to_string((long)imaqError) + "\n");
+			DriverStation::ReportError("IMAQdxConfigureGrab error: " + std::to_string((long)imaqError) + "\n");
 		}
 	}
 	
@@ -77,7 +77,7 @@ private:
 	void TeleopPeriodic() override
 	{
 		Scheduler::GetInstance()->Run();
-		/*IMAQdxGrab(session, frame, true, NULL);
+		IMAQdxGrab(session, frame, true, NULL);
 			if(imaqError != IMAQdxErrorSuccess) {
 				DriverStation::ReportError("IMAQdxGrab error: " + std::to_string((long)imaqError) + "\n");
 			} else {
@@ -86,8 +86,8 @@ private:
 			}
 //			if ((++cnt)%reportRate == 0)
 			{
-				CommandBase::lift->printLiftValues();
-			}*/
+				//CommandBase::lift->printLiftValues();
+			}
 	}
 
 	void TestPeriodic() override
