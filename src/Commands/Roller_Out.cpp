@@ -39,7 +39,7 @@ void Roller_Out::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void Roller_Out::Execute() {
-	Robot::rollers->Run(-fabs(m_speed));
+	Robot::rollers->RunPrimary(-fabs(m_speed));
 }
 
 // Make this return true when this Command no longer needs to run execute()

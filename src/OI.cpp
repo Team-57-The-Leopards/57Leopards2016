@@ -58,13 +58,13 @@ OI::OI() {
 	btnIntakeVert.reset(new JoystickButton(driveStick.get(), 12));
 	btnIntakeVert->WhenPressed(new Intake_Pos(-24661));
 	btnIntakeHorz.reset(new JoystickButton(driveStick.get(), 11));
-	btnIntakeHorz->WhenPressed(new Intake_Pos(-125865));
+	btnIntakeHorz->WhenPressed(new Intake_Pos(-149013));//-125865 (-offset is 23148)
 	btnIntakeCdF.reset(new JoystickButton(driveStick.get(), 3));
-	btnIntakeCdF->WhenPressed(new Intake_Pos(-95000));
+	btnIntakeCdF->WhenPressed(new Intake_Pos(-118148));
 	btnIntakePort.reset(new JoystickButton(driveStick.get(), 4));
-	btnIntakePort->WhenPressed(new IntakePort(-171445));
+	btnIntakePort->WhenPressed(new IntakePort(-194593));
 	btnIntakePortStop.reset(new JoystickButton(driveStick.get(), 4));
-	btnIntakePortStop->WhenReleased(new Intake_Pos(-125865));
+	btnIntakePortStop->WhenReleased(new Intake_Pos(-149013));
     btnRollersOutStop.reset(new JoystickButton(driveStick.get(), 2));
     btnRollersOutStop->WhenReleased(new Roller_Stop());
     btnRollersInStop.reset(new JoystickButton(driveStick.get(), 1));
@@ -73,6 +73,14 @@ OI::OI() {
     btnRollersOut->WhenPressed(new Roller_Out(1));
     btnRollersIn.reset(new JoystickButton(driveStick.get(), 1));
     btnRollersIn->WhenPressed(new Roller_In(1));
+    btnIntakeUp.reset(new JoystickButton(driveStick.get(), 7));
+    btnIntakeUp->WhenPressed(new Intake_Up(0.2));
+    btnIntakeDown.reset(new JoystickButton(driveStick.get(), 8));
+    btnIntakeDown->WhenPressed(new Intake_Down(0.2));
+    btnIntakeDownStop.reset(new JoystickButton(driveStick.get(), 8));
+    btnIntakeDownStop->WhenReleased(new Intake_Stop());
+    btnIntakeUpStop.reset(new JoystickButton(driveStick.get(), 7));
+    btnIntakeUpStop->WhenReleased(new Intake_Stop());
 
     // SmartDashboard Buttons
 

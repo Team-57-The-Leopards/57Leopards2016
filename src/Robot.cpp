@@ -157,6 +157,8 @@ void Robot::TeleopPeriodic() {
 		CameraServer::GetInstance()->SetImage(frame);
 	}
 
+	//if(rollers->frontSwitch == true || rollers->frontRange<)
+
 }
 
 void Robot::TestPeriodic() {

@@ -30,7 +30,7 @@ void Roller_Stop::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void Roller_Stop::Execute() {
-	Robot::rollers->Run(0);
+	Robot::rollers->RunPrimary(0);
 
 }
 

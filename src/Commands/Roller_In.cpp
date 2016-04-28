@@ -38,8 +38,18 @@ void Roller_In::Initialize() {
 }
 
 // Called repeatedly when this Command is scheduled to run
-void Roller_In::Execute() {
-		Robot::rollers->Run(fabs(m_speed));
+void Roller_In::Execute() {//Add logic here to change roller speeds based on ball position in the robot based on feedback from sensors
+	switch(Robot::rollers->GetIntakeState()){
+		case 0:
+			Robot::rollers->RunPrimary(fabs(m_speed));
+			break;
+		case 1:
+			Robot::rollers->RunPrimary(0.5*fabs(m_speed));
+			break;
+		case 2:
+			Robot::rollers->RunPrimary(-fabs(m_speed));
+			break;
+	}
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -49,7 +59,7 @@ bool Roller_In::IsFinished() {
 
 // Called once after isFinished returns true
 void Roller_In::End() {
-
+	Robot::rollers->RunPrimary(0);
 }
 
 // Called when another command which requires one or more of the same
